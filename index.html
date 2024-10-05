@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoirCode Studio</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="title">NoirCode Studio</div>
+        <div class="tabs">
+            <button id="tab-editor" class="active">Editor</button>
+            <button id="tab-preview">Preview</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="editor active">
+            <textarea id="code" placeholder="Type your NoirCode here..." spellcheck="false">
+p{NoirCode is a custom shorthand language designed for building HTML structures with ease. It allows defining tags, attributes, and content in a concise manner. It supports nesting, repetition, inline JavaScript, and comments.}
+
+h2{Basic Syntax}
+
+p{A simple element is defined using the syntax:}
+p\{
+  raw\{
+    tagName[attributes]#id.className1.className2{content}
+  \}
+\}
+
+ul\{
+  li{tagName: The HTML tag to use, such as div, span, h1.}
+  li{attributes: Optional attributes in the form of attr="value".}
+  li{id: Optional ID for the element.}
+  li{className: Optional classes for styling.}
+  li{content: The inner content of the tag.}
+\}
+
+# Example
+h2{Example}
+
+p{Here's how to create a simple division with attributes and styles:}
+pre\{
+  div[style="color: red"]#myId.myClass{Hello, World!}
+\}
+
+# Comments
+h2{Comments}
+
+p\{
+  raw\{
+    Comments can be included with # at the beginning of a line or block comments with #{ to start and #} to end.
+  \}
+\}
+
+# Nesting
+h2{Nesting Elements}
+
+p{Elements can be nested within each other using the > operator.}
+pre\{
+  div\{
+    p{This is a paragraph inside a div.}
+    span{Inline content}
+  \}
+\}
+
+# Repetition
+h2{Repetition}
+
+p{To repeat an element, append *n at the end of the line where n is the number of repetitions.}
+pre\{
+  li{Item &index;}*3
+\}
+
+# Inline JavaScript
+h2{Inline JavaScript}
+
+p{Inline JavaScript is supported using the <$ $> syntax.}
+pre\{
+  p{Current date: <$ var date = new Date().toISOString().split('T')[0].split('-').reverse().join('/'); date $>}
+\}
+
+# Handling Errors
+h2{Handling Errors}
+
+p{Syntax errors are reported during the compilation process. Common issues include mismatched blocks or invalid tag definitions.}
+
+# Advanced Example
+h2{Advanced Example}
+
+p{Combining various features:}
+pre\{
+  ul\{
+    li#unique{First Item}
+    li{Repeated Item &index;}*3
+    li\{
+      div.inner{Nested DIV}
+      p{Inline JS Year: <$ date $>}
+    \}
+  \}
+\}
+
+h2{HTML Block}
+
+p{The HTML Block allows you to write HTML code within NoirCode.}
+
+html\{
+  <p title="Check the code in the editor">This paragraph is written in HTML. Check the code on the left side in the editor.</p>
+\}
+
+h2{Style Block}
+
+p#style-block-overview{The Style Block allows you to write CSS code to style your website. In fact, this paragraph is styled using the Style Block.}
+
+style\{
+  #style-block-overview {
+    text-decoration: underline;
+  }
+\}
+
+h2{Script Block}
+
+p{The Script Block allows you to write full JavaScript code, unlike the inline JS feature, you can write your JS code as if you're using HTML's script tag.}
+p{Click this button to see how JS works here ↓↓↓}
+button[onclick="clickMe();"]{Click me}
+
+script\{
+  function clickMe() {
+    alert('Clicked');
+  }
+\}
+
+h2{Raw Block}
+
+p\{
+  raw\{
+    <div>The Raw Block allows you to write normal text without worrying about errors that might occur when using non-NoirCode syntax. In fact, you're seeing the div elements not because it's a bug, but because we used the Raw Block to write plain text.</div>
+  \}
+\}
+
+# End of Documentation
+h2{Conclusion}
+p{This concludes the basic overview of NoirCode. Explore and experiment to discover more possibilities!}</textarea>
+            <div id="error-message" class="error"></div>
+        </div>
+        <div class="preview">
+            <iframe id="previewFrame" srcdoc="" frameborder="0" style="width: 100%; height: 100%; background-color: transparent;"></iframe>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
