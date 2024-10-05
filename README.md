@@ -4,16 +4,16 @@ Welcome to **NoirCode**! NoirCode is a powerful and intuitive web-based interfac
 
 ## 📋 Table of Contents
 
-- [Features](#features)
-- [Demo](#demo)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-  - [Writing Custom Code](#writing-custom-code)
-  - [Syntax Reference](#syntax-reference)
-- [Error Handling](#error-handling)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [Features](#-features)
+- [Demo](#-demo)
+- [Getting Started](#-getting-started)
+- [Usage](#-usage)
+  - [Writing Custom Code](#-writing-custom-code)
+  - [Syntax Reference](#-syntax-reference)
+- [Error Handling](#-error-handling)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Acknowledgements](#-acknowledgements)
 
 ## 🛠 Features
 
