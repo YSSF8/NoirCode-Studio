@@ -11,7 +11,6 @@ Welcome to **NoirCode**! NoirCode is a powerful and intuitive web-based interfac
   - [Writing Custom Code](#writing-custom-code)
   - [Syntax Reference](#syntax-reference)
 - [Error Handling](#error-handling)
-- [Customization](#customization)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
